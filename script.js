@@ -1,13 +1,12 @@
 const menu = document.querySelector(".menu")
-const link = document.querySelector(".link")
 const cross = document.querySelector(".cross")
-const list = document.querySelector(".list")
+const nav = document.querySelector(".nav")
 
 menu.addEventListener("click",()=>{
 
-link.classList.toggle("active")
+    nav.classList.toggle("active")
 })
 cross.addEventListener("click",()=>{
 
-    link.classList.remove("active")
+    nav.classList.remove("active")
 })

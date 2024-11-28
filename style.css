@@ -1,18 +1,22 @@
-  body,html{
-         
+  body,html{ 
           height: 100%;
-          margin: 0;
-          padding: 0;
+         
            overflow-x: hidden; 
 
+  }
+  *{
+    margin: 0;
+    padding: 0;
   }
 
 header{
   position: relative;
  text-decoration: none;
-   /* padding: 0 45px; */
-    
-     width:100vw;
+ 
+   display: flex;
+   justify-content: space-between;
+    padding: 50px 50px;
+     
     height :100vh;
     /* height: 100vh; */
      font-family: "Roboto", serif;
@@ -20,43 +24,40 @@ header{
   background-size: cover;
    background-position:center;
 
-
-   
 }
 
 .nav{
-  display: flex;
-  /* flex-wrap: wrap; */
-  width: 96%;
-  
-   position: absolute;  
-  font-size: 1.7vw;
-  margin: 10px 3vw;
- 
-  
+    position: relative;
 }
- .nav ul {
+.nav ul{
   list-style: none;
   display: flex;
-  gap: 5vw;
-  /* margin: 30px 19vmax; */
+  gap: 60px;
   position: relative;
-  top: 10px;
-  right: -15%;
-  margin-right: 200px;
-  font-weight: 700;
-  color: rgb(27, 27, 27)
-
+   margin-left: -50%; 
+  margin-top: 2%;
+   font-weight: 700;
+  font-size: 17px;
+}
+.nav ul li{
+  cursor: pointer;
 }
 .nav ul a{
   text-decoration: none;
   color: black;
   cursor: pointer;
+ 
 }
-.nav h1{
-  font-size: 4.7vmin;
+.heading h1{
+  font-size: 4vmin
 }
 .ctn{
+  border: 2px solid black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: -15px;
+}
+/* .ctn{
   position: relative;
   top: -12px;
   right: -20%;
@@ -68,52 +69,70 @@ header{
   cursor: pointer;
   border-radius: 5px;
   flex-shrink: 0;
-} 
+}  */
 .menu,.cross{
   display: none;
 }
-.active{
-  text-decoration: underline lightgoldenrodyellow;
-  text-decoration-thickness: 2px;
+.activity{
+  text-decoration: underline rgb(255, 255, 200);
+  text-decoration-thickness: 3px;
   text-underline-offset: 5px;
 }
 
+
 /* Mobile view */
-@media only screen and (max-width:850px){
-  .ctn{
-    right: -12%;
-  }
+
+@media (max-width:900px){
  
-  .link{
-     background: rgb(235, 222, 198);
-    position: absolute;
-    width: 122%;
-    height: 101vh;
-   
-   margin: -725px -40px;
-    z-index: 50;
-    border-bottom-right-radius: 50%;
-  } 
-   .link.active{
-    margin: -20px -40px;
-    transition: all 0.5s ease;
-     }
-  .link ul{
+  .menu{
+    right:-68%;
+    top: 50px;
+  }
+  .cross{
+    right: 0%;
+    top:35px ;
+  }
+  .heading h1{
+    top: 18px;
+  font-size: 6vmin;
+  }
+
+}
+@media(max-width:1349px){
+  .nav{ 
+  
+    position:absolute;
+    
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: 24px;
-    top: 130px;
-    left: 30%;
-    justify-content: center;
-    align-items: center;
-    gap: 70px;
-    width: 20%;
+  justify-content: center;
+  align-items: center;
+  top: -110%;
+  margin-right: 0%;
+  margin-left: -23%;
+  background: gainsboro;
+  width:100%;
+  height: 100%;
   }
-  .ctn{
-   left: 0px;
+  .nav.active{
+    top: -10%;
+    transition: all 0.5s ease;
   }
-  .menu,.cross{
+  .nav ul{
+     font-size: 28px;
+     display: flex;
+     flex-direction: column;
+     left: 25%;
+     text-align: center;
+     gap: 70px;
+  } 
+  .heading{
+    display: flex;
+    justify-content: space-between;
+  }
+  .heading h1{
+    font-size: 5.5vmin !important;
+  }
+   .menu,.cross{
     display: block;
     font-size:4.5vmin;
     font-weight: 800;
@@ -121,16 +140,36 @@ header{
    cursor: pointer;
   }
   .menu{
- right: -67%;
-    top: 18px;
-  }
+    position: absolute;
+    left: 90%;
+  } 
   .cross{
-    right: -78%;
-    top:35px ;
+    top: -33%;
+    left: 22%;
   }
-  .nav h1{
-    top: 18px;
-    font-size:4.7vmin ;
-  }
+  
+  
+}
 
+
+@media(min-width:1350px){
+  
+  .nav{
+    margin-left: 28%;
+  }
+  .nav ul{
+    font-size: 24px;
+  }
+ 
+}
+@media(max-width:1699px){
+  .nav{
+    left: 23%;
+  }
+  .heading h1{
+    font-size: 46px;
+  }
+  .nav ul{
+    font-size: 28px;
+  }
 }
