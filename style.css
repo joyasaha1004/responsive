@@ -33,7 +33,7 @@ header{
 .nav ul{
   list-style: none;
   display: flex;
-  gap: 80px;
+  gap: 70px;
   position: relative;
    margin-left: 0%; 
   margin-top: 2%;
@@ -87,7 +87,6 @@ header{
    font-size: 20px;
  }
  
-   
 }
 
 @media(max-width:900px){
@@ -162,6 +161,7 @@ header{
   .nav ul{
     display: flex;
     flex-direction: column;
+    gap: 50px;
    
   }
   .nav ul li{
